@@ -1,4 +1,4 @@
 Locales['fa'] = {
-  ['used_bread'] = 'you have used ~y~1x~s~ ~b~bread~s~',
-  ['used_water'] = 'you have used ~y~1x~s~ ~b~water~s~',
+  ['used_bread'] = 'شما ~y~1x~s~ ~b~نان~s~ خوردید',
+  ['used_water'] = 'شما ~y~1x~s~ ~b~آب~s~ نوشیدید',
 }
