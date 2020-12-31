@@ -8,7 +8,7 @@ ESX.RegisterUsableItem('bread', function(source)
 
 	TriggerClientEvent('esx_status:add', source, 'hunger', 200000)
 	TriggerClientEvent('esx_basicneeds:onEat', source)
-	xPlayer.showNotification(_U('used_bread'))
+	TriggerClientEvent("pNotify:SendNotification", source, { text = _U('used_bread'), type = "info", timeout = 5000, layout = "bottomCenter"})
 end)
 
 ESX.RegisterUsableItem('water', function(source)
@@ -17,7 +17,7 @@ ESX.RegisterUsableItem('water', function(source)
 
 	TriggerClientEvent('esx_status:add', source, 'thirst', 200000)
 	TriggerClientEvent('esx_basicneeds:onDrink', source)
-	xPlayer.showNotification(_U('used_water'))
+	TriggerClientEvent("pNotify:SendNotification", source, { text = _U('used_water'), type = "info", timeout = 5000, layout = "bottomCenter"})
 end)
 
 ESX.RegisterCommand('heal', 'admin', function(xPlayer, args, showError)
