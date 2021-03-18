@@ -53,7 +53,7 @@ AddEventHandler('esx_status:loaded', function(status)
 
 	Citizen.CreateThread(function()
 		while true do
-			Citizen.Wait(1000)
+			Citizen.Wait(5000)
 
 			local playerPed  = PlayerPedId()
 			local prevHealth = GetEntityHealth(playerPed)
@@ -62,7 +62,7 @@ AddEventHandler('esx_status:loaded', function(status)
 			TriggerEvent('esx_status:getStatus', 'hunger', function(status)
 				if status.val == 0 then
 					if prevHealth <= 150 then
-						health = health - 5
+						health = health - 1
 					else
 						health = health - 1
 					end
@@ -72,7 +72,7 @@ AddEventHandler('esx_status:loaded', function(status)
 			TriggerEvent('esx_status:getStatus', 'thirst', function(status)
 				if status.val == 0 then
 					if prevHealth <= 150 then
-						health = health - 5
+						health = health - 1
 					else
 						health = health - 1
 					end
