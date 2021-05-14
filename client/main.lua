@@ -53,7 +53,7 @@ AddEventHandler('esx_status:loaded', function(status)
 
 	Citizen.CreateThread(function()
 		while true do
-			Citizen.Wait(5000)
+			Citizen.Wait(3000)
 
 			local playerPed  = PlayerPedId()
 			local prevHealth = GetEntityHealth(playerPed)
